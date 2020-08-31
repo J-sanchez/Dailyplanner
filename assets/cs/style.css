@@ -21,11 +21,11 @@ body {
     border-bottom: 10px solid black;
   }
   
-  .description{
+  .text-descript {
     white-space: pre-wrap;
   }
   
-  .time-block{
+  .hours {
     text-align: center;
     border-radius: 15px;
   }
