@@ -23,12 +23,12 @@ $(document).ready(function () {
     $("#15nth-hour .text-descript").val(localStorage.getItem("15nth-hour"));
     $("#16nth-hour .text-descript").val(localStorage.getItem("16nth-hour"));
     $("#17nth-hour .text-descript").val(localStorage.getItem("17nth-hour"));
-    function hourTracker() {
+    function hoursTracker() {
         //get current hour
         var currentHour = moment().hour();
 
         // loop over time block
-        $(".hours").each(function () {
+        $(".time-block").each(function () {
             var blockHour = parseInt($(this).attr("id").split("hour")[1]);
             console.log( blockHour, currentHour)
 
@@ -50,5 +50,5 @@ $(document).ready(function () {
             }
         })
     }
-    hourTracker();
+    hoursTracker();
 })
