@@ -12,8 +12,6 @@ $(document).ready(function () {
         //set items in local storage.
         localStorage.setItem(time, text);
     })
-    $("#7nth-hour .text-descript").val(localStorage.getItem("7nth-hour"));
-    $("#8nth-hour .text-descript").val(localStorage.getItem("8nth-hour"));
     $("#9nth-hour .text-descript").val(localStorage.getItem("9nth-hour"));
     $("#10nth-hour .text-descript").val(localStorage.getItem("10nth-hour"));
     $("#11nth-hour .text-descript").val(localStorage.getItem("11nth-hour"));
@@ -29,10 +27,10 @@ $(document).ready(function () {
 
         // loop over time block
         $(".time-block").each(function () {
-            var blockHour = parseInt($(this).attr("id").split("hour")[1]);
-            console.log( blockHour, currentHour)
+            var blockHour = parseInt($(this).attr("id").split("hour")[0]);
+            console.log(blockHour, currentHour)
 
-            //check if moved past this time
+            //check if moved past time
             if (blockHour < currentHour) {
                 $(this).addClass("past");
                 $(this).removeClass("future");
